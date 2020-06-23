@@ -1,0 +1,9 @@
+---
+# tasks file for centos7-k8s-prep.yml
+  #import_tasks: /home/dappel/projects/myansible/roles/centos7-k8s-prep/tasks/add_elrepo.yml
+- import_tasks: add_elrepo.yml
+- import_tasks: install_packages.yml
+- import_tasks: add_hostpath.yml
+- import_tasks: update.yml
+  
+

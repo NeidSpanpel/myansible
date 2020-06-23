@@ -1,0 +1,9 @@
+---
+# vars file for centos7-k8s-install
+k8s:
+  - kubelet
+  - kubeadm
+  - kubectl
+  - yum-utils
+  - device-mapper-persistent-data
+  - lvm2

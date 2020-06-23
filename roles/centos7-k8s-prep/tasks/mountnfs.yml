@@ -1,0 +1,11 @@
+---
+- name: mount nfs
+  mount:
+    fstype: nfs
+    opts: defaults
+    dump: 0
+    passno: 0
+    state: mounted
+    src: <nfs-server>:/home/nfs
+    path: /nfs-stuff
+  when: ("'worker' in inventory_hostname") or ("'master' in inventory_hostname")

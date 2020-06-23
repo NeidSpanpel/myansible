@@ -1,0 +1,8 @@
+---
+# vars file for centos7-k8s-prep.yml
+packages:
+  - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  - vim
+    #- htop
+  - chrony
+  - nfs-utils

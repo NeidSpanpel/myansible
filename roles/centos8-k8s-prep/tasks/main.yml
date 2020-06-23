@@ -1,0 +1,3 @@
+---
+# tasks file for centos8-k8s-prep
+- import_tasks: os_update.yml

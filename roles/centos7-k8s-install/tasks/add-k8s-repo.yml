@@ -1,0 +1,28 @@
+---
+- name: add k8s repo
+  copy:
+    src: "{{ role_path }}/files/k8s.repo"
+    dest: /etc/yum.repos.d/k8s.repo
+    mode: 0700
+
+
+- name: add docker repo
+  shell: |
+    yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+- name: install docker
+  yum:
+    name: docker-ce
+    state: latest
+
+- name: configure docker for systemd
+  copy:
+    src: "{{ role_path }}/files/daemon.json"
+    dest: /etc/docker/daemon.json
+    mode: 0700
+  
+- name: start and enalbe docker
+  service:
+    name: docker
+    state: started
+    enabled: true

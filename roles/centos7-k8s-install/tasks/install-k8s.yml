@@ -1,0 +1,14 @@
+---
+- name: install kubernetes
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ k8s }}"
+
+- name: start and enalbe kubelet
+  service:
+    name: kubelet
+    state: started
+    enabled: true
+
+

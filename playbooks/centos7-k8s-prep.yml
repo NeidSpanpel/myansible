@@ -1,0 +1,8 @@
+---
+- name: centos7-k8s-prep
+  hosts: all
+  user: root
+  roles:
+  - centos7-k8s-prep 
+  
+  

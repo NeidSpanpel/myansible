@@ -1,0 +1,6 @@
+---
+- name: install k8s
+  hosts: all
+  user: root
+  roles:
+    - kubecluster

@@ -1,0 +1,11 @@
+---
+- name: install k8s
+  dnf:
+    name: kubeadm
+    state: latest
+
+- name: start and enable kubelet
+  service:
+    name: kubelet
+    state: started
+    enabled: yes

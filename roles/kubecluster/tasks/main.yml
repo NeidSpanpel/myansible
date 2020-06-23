@@ -1,0 +1,5 @@
+---
+# tasks file for kubecluster
+- import_tasks: sysconfig.yml
+- import_tasks: add_repos.yml
+- import_tasks: install_k8s.yml

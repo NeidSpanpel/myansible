@@ -1,0 +1,6 @@
+---
+- name: centos8-k8s-prep 
+  hosts: k8s-master-1,k8s-worker-1
+  user: root
+  roles:
+    - centos8-k8s-prep

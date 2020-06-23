@@ -1,0 +1,6 @@
+---
+- name: add hostpath
+  file:
+    path: /nfs-stuff
+    state: directory
+    mode: '0755'

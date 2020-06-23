@@ -1,0 +1,5 @@
+---
+# tasks file for centos7-k8s-install
+- import_tasks: sysconfig.yml
+- import_tasks: add-k8s-repo.yml
+- import_tasks: install-k8s.yml

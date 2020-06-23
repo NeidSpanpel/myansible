@@ -1,0 +1,5 @@
+---
+- name: update centos 8
+  dnf:
+    name: '*'
+    state: latest
